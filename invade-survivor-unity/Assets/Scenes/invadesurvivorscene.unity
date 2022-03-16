@@ -217,7 +217,6 @@ GameObject:
   - component: {fileID: 601677282}
   - component: {fileID: 601677281}
   - component: {fileID: 601677284}
-  - component: {fileID: 601677285}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -286,8 +285,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3995302596134580986, guid: c837e6eee66344f4fb547ccd5d4ae4cc,
-    type: 3}
+  m_Sprite: {fileID: 939489211220940695, guid: 352973c4c0e974514bd6ea8cb89ef22b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -326,18 +324,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementJoystick: {fileID: 1662362393}
   playerSpeed: 2
---- !u!114 &601677285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 601677280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd2c001e9f0e4f83a2e47333b9e0569, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &799947043
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,8 +381,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1684596000066623116, guid: ff7982f5add904541aaf4b9bb0a4b371,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 741b7ce2bb39444a898410d789d71704, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -415,11 +400,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799947043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7584126, y: -0.08489618, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalPosition: {x: 1.13, y: -2.05, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &822704796
 GameObject:
@@ -489,8 +474,8 @@ Canvas:
   m_GameObject: {fileID: 822704796}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1437505146}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -514,7 +499,7 @@ RectTransform:
   m_Children:
   - {fileID: 1662362392}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -532,6 +517,7 @@ GameObject:
   - component: {fileID: 1437505147}
   - component: {fileID: 1437505146}
   - component: {fileID: 1437505145}
+  - component: {fileID: 1437505148}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -570,7 +556,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -604,6 +590,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1437505148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437505144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd2c001e9f0e4f83a2e47333b9e0569, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 601677283}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1662362391
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -850}
+  m_AnchoredPosition: {x: 0, y: -393}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752880462
@@ -868,7 +868,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -850}
+  m_AnchoredPosition: {x: 0, y: -393}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1814512541
