@@ -189,7 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5277650ba5e83c4181cd81193d5c8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  bullet: {fileID: 2584785975817388715, guid: 9d3683c36349a40ba837a883a36038cb, type: 3}
+  speed: 1.5
 --- !u!1 &1357670695
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +262,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 939489211220940695, guid: 352973c4c0e974514bd6ea8cb89ef22b, type: 3}
+  m_Sprite: {fileID: 7042348869349113295, guid: 352973c4c0e974514bd6ea8cb89ef22b,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
