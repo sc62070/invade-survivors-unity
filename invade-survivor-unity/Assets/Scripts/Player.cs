@@ -7,6 +7,7 @@ public class Player : MonoBehaviour{
     public GameObject bullet;
 
     private Rigidbody2D myBody;
+    private Animator character;
 
     public float speed;
 
@@ -14,6 +15,8 @@ public class Player : MonoBehaviour{
 
     void Awake () {
         myBody = GetComponent<Rigidbody2D>();
+        character = transform.GetChild(0).GetComponent<Animator>();
+
     }
 
     private void Update() 
@@ -42,5 +45,12 @@ public class Player : MonoBehaviour{
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput.normalized * speed;
         myBody.MovePosition(myBody.position + moveVelocity * Time.fixedDeltaTime);
+    
+        if(moveVelocity == Vector2.zero)
+            character.SetBool("Moving", false);
+        else
+            character.SetBool("Moving", true);
+         
+
     }
 }
