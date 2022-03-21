@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4482451083372382563}
   m_Layer: 0
   m_Name: Devil1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0070269555, y: -0.012882743}
+  m_Offset: {x: -0.004405111, y: -0.020748332}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,7 +129,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.063153595, y: 0.14207274}
+  m_Size: {x: 0.09461594, y: 0.1578039}
   m_EdgeRadius: 0
 --- !u!114 &4482451083372382563
 MonoBehaviour:
@@ -143,3 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a20d69b248a24bd0a9174670cdffc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.5

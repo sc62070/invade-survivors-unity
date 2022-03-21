@@ -10,8 +10,12 @@ public class Player : MonoBehaviour{
     private Animator character;
 
     public float speed;
+    [SerializeField]
+    private int health;
 
     private Vector2 moveVelocity;
+
+    private bool hit = true;
 
     void Awake () {
         myBody = GetComponent<Rigidbody2D>();
@@ -52,5 +56,23 @@ public class Player : MonoBehaviour{
             character.SetBool("Moving", true);
          
 
+    }
+
+    IEnumerator HitBoxOff()
+    {
+        hit = false;
+        yield return new WaitForSeconds(1.5f);
+        hit = true;
+    }
+
+   void OnTriggerEnter2D(Collider2D target) 
+    {
+        if(target.tag == "Enemy")
+        {
+            if(hit) {
+                StartCoroutine(HitBoxOff());
+                health--;
+            }
+        }    
     }
 }
